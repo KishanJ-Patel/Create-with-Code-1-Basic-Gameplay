@@ -24,6 +24,7 @@ public class DestroyOutOfBounds : MonoBehaviour
             || transform.position.x < -sideBound)
         {
             Destroy(gameObject);
+            GameObject.FindGameObjectWithTag("ScoreboardManager").GetComponent<ScoreboardManager>().decreaseLives();
         }
     }
 }

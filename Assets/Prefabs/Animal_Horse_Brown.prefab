@@ -1477,7 +1477,7 @@ GameObject:
   - component: {fileID: 735081838}
   m_Layer: 0
   m_Name: Animal_Horse_Brown
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1551,6 +1551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBound: 30
   lowerBound: -10
+  sideBound: 30
 --- !u!65 &895398669162129563
 BoxCollider:
   m_ObjectHideFlags: 0

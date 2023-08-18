@@ -8,20 +8,28 @@ public class DetectCollisions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        GameObject scoreboardManager = GameObject.FindGameObjectWithTag("ScoreboardManager");
 
-        // Debug.Log(other.gameObject.CompareTag("Player") ? "Game Over" : null);
-        if (other.gameObject.CompareTag("Player")) Debug.Log("Game Over");
+        if (gameObject.CompareTag("Projectile"))
+        {
+            if (other.gameObject.CompareTag("Animal")) Destroy(gameObject);
+        }
+        else if (gameObject.CompareTag("Animal"))
+        {
+            if (other.gameObject.CompareTag("Projectile")) scoreboardManager.GetComponent<ScoreboardManager>().increaseScore();
+            else if (other.gameObject.CompareTag("Player")) scoreboardManager.GetComponent<ScoreboardManager>().decreaseLives();
+            Destroy(gameObject);
+        }
     }
 }

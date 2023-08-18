@@ -1178,7 +1178,7 @@ GameObject:
   - component: {fileID: 1317505886}
   m_Layer: 0
   m_Name: Dog_BorderCollie_01
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1283,6 +1283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBound: 30
   lowerBound: -10
+  sideBound: 30
 --- !u!65 &4186769608103847634
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -39,7 +39,7 @@ public class SpawnManager : MonoBehaviour
     {
         // Spawn random animal at random location inside the spawn range
         int animalIndex = Random.Range(0, animalPrefabs.Length);
-        Vector3 spawnPos = new Vector3(-sideSpawnPosX, 0, Random.Range(0, sideSpawnRangeZ));
+        Vector3 spawnPos = new Vector3(-sideSpawnPosX, 0, Random.Range(2, sideSpawnRangeZ));
 
         Instantiate(animalPrefabs[animalIndex], spawnPos, Quaternion.Euler(0, 90, 0));
     }
@@ -48,7 +48,7 @@ public class SpawnManager : MonoBehaviour
     {
         // Spawn random animal at random location inside the spawn range
         int animalIndex = Random.Range(0, animalPrefabs.Length);
-        Vector3 spawnPos = new Vector3(sideSpawnPosX, 0, Random.Range(0, sideSpawnRangeZ));
+        Vector3 spawnPos = new Vector3(sideSpawnPosX, 0, Random.Range(2, sideSpawnRangeZ));
 
         Instantiate(animalPrefabs[animalIndex], spawnPos, Quaternion.Euler(0, 270, 0));
     }
