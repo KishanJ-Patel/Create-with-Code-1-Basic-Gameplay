@@ -6,6 +6,7 @@ public class DestroyOutOfBounds : MonoBehaviour
 {
     [SerializeField] private float topBound = 30f;
     [SerializeField] private float lowerBound = -10f;
+    [SerializeField] private float sideBound = 30f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,13 +18,11 @@ public class DestroyOutOfBounds : MonoBehaviour
     void Update()
     {   
         // Remove game object if it goes past bounds
-        if (transform.position.z > topBound)
+        if (transform.position.z > topBound 
+            || transform.position.z < lowerBound
+            || transform.position.x > sideBound
+            || transform.position.x < -sideBound)
         {
-            Destroy(gameObject);
-        }
-        else if (transform.position.z < lowerBound)
-        {
-            Debug.Log("Game Over");
             Destroy(gameObject);
         }
     }

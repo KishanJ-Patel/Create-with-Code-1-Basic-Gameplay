@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
     {
         // Restrict movement past the range 
         float clampedX = Mathf.Clamp(transform.position.x, -xRange, xRange);
-        float clampedZ = Mathf.Clamp(transform.position.x, 0, zRange);
+        float clampedZ = Mathf.Clamp(transform.position.z, 0, zRange);
 
         transform.position = new Vector3(clampedX, transform.position.y, clampedZ);
     }

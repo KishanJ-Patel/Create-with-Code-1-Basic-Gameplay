@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,5 +20,8 @@ public class DetectCollisions : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
+
+        // Debug.Log(other.gameObject.CompareTag("Player") ? "Game Over" : null);
+        if (other.gameObject.CompareTag("Player")) Debug.Log("Game Over");
     }
 }
